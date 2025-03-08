@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val startQuizButton = findViewById<Button>(R.id.startQuizButton)
 
         startQuizButton.setOnClickListener {
-            val intent = Intent(this, InsideQuiz::class.java)
+            val intent = Intent(this, RulesActivity::class.java)
             startActivity(intent)
             finish()
         }

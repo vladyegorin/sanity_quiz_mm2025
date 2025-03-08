@@ -12,13 +12,18 @@ class InsideQuiz: AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.insidequiz)
         val panicButton = findViewById<Button>(R.id.panicButton)
+        //30+
+        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation)
+        //60+
+        val pulseAnimationExtra = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation_extra)
+        //100
+        val pulseAnimation100 = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation_100)
+        panicButton.startAnimation(pulseAnimation)
         panicButton.setOnClickListener {
-
+            panicButton.startAnimation(pulseAnimation100)
         }
 
-        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation)
 
 
-        panicButton.startAnimation(pulseAnimation)
     }
 }

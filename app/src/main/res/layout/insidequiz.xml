@@ -2,28 +2,25 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#000000">
 
+    <!-- Panic Button -->
+    <Button
+        android:id="@+id/panicButton"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/panicbutton"
+        android:text="PANIC"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#9c0d11"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:stateListAnimator="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="60dp" />
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000">
-
-        <!-- Panic Button -->
-        <Button
-            android:id="@+id/panicButton"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:background="@drawable/panicbutton"
-            android:text="PANIC"
-            android:textColor="#FFFFFF"
-            app:backgroundTint="#9c0d11"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_centerInParent="true"
-            android:stateListAnimator="@null" /> <!-- Disable default button elevation animation -->
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

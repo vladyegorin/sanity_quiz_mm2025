@@ -1,82 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#000000">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
-
-        <!-- Title -->
-        <TextView
-            android:id="@+id/titleTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ARE YOU READY TO DESCEND?"
-            android:textSize="32sp"
-            android:textColor="#FF0000"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:letterSpacing="0.3"
-            android:shadowColor="#44000000"
-            android:shadowDx="4"
-            android:shadowDy="4"
-            android:shadowRadius="8" />
+    android:background="#E0F7FA"
+    android:padding="16dp">
 
 
-        <TextView
-            android:id="@+id/subtitleTextView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Do you hear voices when no one speaks?\nDo shadows follow you in the light?\nAre you truly... sane?"
-            android:textSize="18sp"
-            android:textColor="#FFAAAA"
-            android:textStyle="italic"
-            android:gravity="center"
-            android:layout_marginTop="24dp"
-            android:lineSpacingExtra="8dp" />
+    <TextView
+    android:id="@+id/titleTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Welcome to my first quiz app!"
+    android:textSize="32sp"
+    android:textColor="#00796B"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-condensed"
+    android:gravity="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="48dp" />
 
 
-        <ImageView
-            android:id="@+id/creepyBackground"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:layout_marginTop="16dp"
-            android:alpha="0.6"
-            android:scaleType="centerCrop"
-            android:src="@drawable/creepy_image" />
+    <TextView
+    android:id="@+id/subtitleTextView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Let's have some fun, shall we?"
+    android:textSize="24sp"
+    android:textColor="#0097A7"
+    android:textStyle="italic"
+    android:fontFamily="sans-serif-light"
+    android:gravity="center"
+    app:layout_constraintTop_toBottomOf="@id/titleTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="16dp" />
 
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/startQuizButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:padding="16dp"
-            android:text="BEGIN YOUR DESCENT"
-            android:textAllCaps="false"
-            android:textColor="#000000"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:backgroundTint="#9c0d11" />
+    <Button
+    android:id="@+id/startQuizButton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Start Quiz"
+    android:textSize="24sp"
+    android:textColor="#FFFFFF"
+    android:backgroundTint="#FF80AB"
+    android:paddingHorizontal="32dp"
+    android:paddingVertical="16dp"
+    android:fontFamily="sans-serif-medium"
+    android:elevation="8dp"
+    android:stateListAnimator="@null"
+    app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:layout_marginTop="48dp"
+    android:layout_marginBottom="48dp" />
 
 
-        <TextView
-            android:id="@+id/warningTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="WARNING: THIS JOURNEY MAY UNSETTLE YOUR MIND."
-            android:textSize="14sp"
-            android:textColor="#FF4444"
-            android:gravity="center"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
-            android:letterSpacing="0.2" />
+    <ImageView
+    android:id="@+id/happyImage"
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:src="@drawable/flower_face"
+    android:contentDescription="Happy face"
+    app:layout_constraintTop_toBottomOf="@id/subtitleTextView"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginTop="32dp" />
 
-    </LinearLayout>
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
