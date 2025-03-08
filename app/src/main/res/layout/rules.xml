@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#E0F7FA"
+        android:elevation="4dp"
+        android:paddingTop="16dp"
+    app:title="My First Quiz!"
+    app:titleTextColor="@android:color/black"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        android:id="@+id/card"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <TextView
+        android:id="@+id/rulesTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="• Rule 1: Answer all questions honestly.\n• Rule 2: No cheating allowed.\n• Rule 3: Have fun!\n• Rule 4: Whatever you do, don’t look back."
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:lineSpacingExtra="8dp"
+
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/startQuizButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Quiz"
+        android:textSize="24sp"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#FF80AB"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="8dp"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@id/card"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure?"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Message -->
+    <TextView
+        android:id="@+id/dialogMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Are you sure you want to start? There is no going back."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <!-- Yes Button (Image) -->
+        <ImageView
+            android:id="@+id/yesButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/yes_image"
+            android:contentDescription="Yes"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="24dp"/>
+
+        <!-- No Button (Text) -->
+        <ImageView
+            android:id="@+id/noButton"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/no_image"
+            android:contentDescription="Yes"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginEnd="24dp"/>
+    </LinearLayout>
+</LinearLayout>
