@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.animation.AnimationUtils
@@ -10,6 +11,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 
 class Question5: AppCompatActivity() {
@@ -17,13 +19,17 @@ class Question5: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.insidequiz)
+        val mainLayout: ConstraintLayout = findViewById(R.id.mainLayout)
+        mainLayout.setBackgroundResource(R.drawable.blood_background)
+        val questionView: TextView = findViewById(R.id.chigibam)
+        questionView.setTextColor(Color.parseColor("#114b7f"))
 
-        var questionCounter = 3;
+        var questionCounter = 5;
 
         val panicButton = findViewById<Button>(R.id.panicButton)
         panicButton.setOnClickListener {
             val intent = Intent(this, BreathingActivityCracked::class.java)
-
+            intent.putExtra("questionCounter", questionCounter)
             startActivity(intent)
         }
         val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation_extra)
@@ -81,7 +87,7 @@ class Question5: AppCompatActivity() {
 
     private fun wrongAnswerDialog() {
 
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.wrong_answer_dialogue_q3, null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.wrong_answer_dialogue_q4, null)
 
 
         val dialog = AlertDialog.Builder(this)
@@ -102,7 +108,7 @@ class Question5: AppCompatActivity() {
 
     private fun rightCreepyDialogue() {
 
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.correct_creepy_answer_q3, null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.correct_creepy_answer_q4, null)
 
 
         val dialog = AlertDialog.Builder(this)
@@ -114,7 +120,7 @@ class Question5: AppCompatActivity() {
 
 
         okButton.setOnClickListener {
-            val intent = Intent(this, Question4::class.java)
+            val intent = Intent(this, Question6::class.java)
             startActivity(intent)
             finish()
         }
@@ -129,7 +135,7 @@ class Question5: AppCompatActivity() {
         selectedAnswer?.background = ContextCompat.getDrawable(this, R.drawable.default_answer_background)
 
         // Select the new answer
-        newAnswer.background = ContextCompat.getDrawable(this, R.drawable.glow_effect)
+        newAnswer.background = ContextCompat.getDrawable(this, R.drawable.evil_glow_effect)
 
         // Update next button visibility
         nextButton.visibility = Button.VISIBLE
