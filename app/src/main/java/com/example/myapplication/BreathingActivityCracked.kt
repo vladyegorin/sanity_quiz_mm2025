@@ -57,7 +57,7 @@ class BreathingActivityCracked : AppCompatActivity() {
             }, 6000)
 
             handler.postDelayed({
-                val intent = Intent(this, Question3::class.java)
+                val intent = Intent(this, Question5::class.java)
                 startActivity(intent)
                 finish()
             }, 7000)

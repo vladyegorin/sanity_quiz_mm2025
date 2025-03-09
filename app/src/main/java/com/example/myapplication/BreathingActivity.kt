@@ -17,10 +17,11 @@ class BreathingActivity : AppCompatActivity() {
     private val handler = Handler(Looper.getMainLooper())
     private var cycleCount = 0
 
+    var questionCounter = 0;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.breathing)
-
+        questionCounter = intent.getIntExtra("questionCounter", 0)
         breathingCircle = findViewById(R.id.breathingCircle)
         instructionText = findViewById(R.id.instructionText)
 
@@ -61,10 +62,15 @@ class BreathingActivity : AppCompatActivity() {
                     if (cycleCount < 3) {
                         startBreathingAnimation()
                     } else {
+                        if(questionCounter == 3){
                         val intent = Intent(this@BreathingActivity, Question3::class.java)
                         startActivity(intent)
                         finish()
-                    }
+                    }else{
+                        val intent = Intent(this@BreathingActivity, Question4::class.java)
+                        startActivity(intent)
+                        finish()
+                    }}
                 }, 5000)
             }, 3000)
         }, 5000)

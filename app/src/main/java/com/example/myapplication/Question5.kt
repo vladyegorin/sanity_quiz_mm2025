@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 
-class Question3: AppCompatActivity() {
+class Question5: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -22,11 +22,11 @@ class Question3: AppCompatActivity() {
 
         val panicButton = findViewById<Button>(R.id.panicButton)
         panicButton.setOnClickListener {
-            val intent = Intent(this, BreathingActivity::class.java)
-            intent.putExtra("questionCounter", questionCounter)
+            val intent = Intent(this, BreathingActivityCracked::class.java)
+
             startActivity(intent)
         }
-        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation)
+        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation_extra)
         panicButton.startAnimation(pulseAnimation)
 
         val ans1 = findViewById<TextView>(R.id.answerText1)
