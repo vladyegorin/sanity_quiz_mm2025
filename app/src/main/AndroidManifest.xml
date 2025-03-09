@@ -25,6 +25,12 @@
         </activity>
         <activity android:name=".RulesActivity">
         </activity>
+        <activity android:name=".Question2">
+        </activity>
+        <activity android:name=".ScreamerActivity">
+        </activity>
+        <activity android:name=".BreathingActivity">
+        </activity>
     </application>
 
 </manifest>

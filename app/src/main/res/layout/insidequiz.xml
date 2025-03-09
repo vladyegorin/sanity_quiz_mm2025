@@ -53,7 +53,7 @@
         app:autoSizeMaxTextSize="40sp"
         app:autoSizeStepGranularity="2sp"
 
-
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
@@ -162,7 +162,7 @@
             android:id="@+id/answerText4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Answer 4"
+            android:text="z̶̧̧̨̨̛̛̛̰̪̖̞͕̼̯̙̦͔̯̤̲͓̳̝̬̳̰̰̗̰̦̺̘͔̯̻͈̰̭̙͕̘̖͕̈́̉́̎͒̽̐̑̆̈̽̂̔͆̎́̄͑̄̈́͆͐͑͐̒͊͛͗̈̓̅͛̍̇͊̆̾͒̈́͐̍̓͗̇̿̆̄͗̊͐̉̽̔̈́̽̏̐̊̋̏̓̽̒̒̈́͋̇̽̉̈͊̆̌̈́͊̂̏̿͒̍̊̑̿̈́̒̓̅͐͒͒̇̎͊͆̐̈͌͆̅̓̂͂̿͒̀̅̐͗̈́̚̚͘͘͜͜͜͝͝͝͝͝à̷̧̢̗̱̯̘͕͇̫̗̬͚̲̲̗̬̳̼̈́̓̄̏͒͐̈̈́͒͌̆̐̌̌̈́͑̃̌͑́̏̎̐̔̽̈́͂̀̃̀͛̈́̂͒̿̈̓͊̿͛͌͐͂̏̇̉͛͆̇̀̑͐̽́̈́͐͑̍̎̇̀̑͆̒͑͑̈́̀͗̀̂͋́̑́̈́̂̅͆͛̑́̃̈̈́̍̃̊̎̈́̑̊͂̈̓̂͌͋͋̌̍̐̿͛͂̌͌͑͛̎̈̽̆̌́̌̈́̌̏͐̈́̍́̿̌̽̍̈͋̌̓̋̀̊͘̚̚̕̕͘̕̚͘͘̚͝͝͠͝͝͝͠͝͝͠͝l̴̢̨̧̨̨̨̢̢̧̧̧̡̢̧̡̨̢̧̧̡̛̛̛̛̛̛̛̼͚̬̗̘̠͎̝̳̳̤̺̦̰̠͖̫̺̝̩̱̙̩̱͈͚̗͓̪̝͉͕̝̟͙͙̻̝̳̪̙̙͖͚̗̗̲̱̘̤͍̥̦̪̰̥̗͕̫̞͓̮̯̟̟̝̦̻̙̖̮̜͉͎̤̟̥̤͓͙͖̹͈̣̰̱̠̙̺̗͚̹͖͕̥̪̜̺̱̥̦̲̲̗̱͇͈̹̭̤͚̖͓͉̭̰͉͉̭̖͎͖̤̠̪̯̠̣̀̊̔̑̈́͐̄͊̇̑̿͆̽̈́͒́͌̅̍̄͒͆̓͆̈́͌͗̔̏͂͋̒̋͆̎̀̓̒͛́̀̅̀́͌̍̓͌͐͂̈́́́̋̾̅̔͛̉̎̍̉̇̽̒̈́̾̾̽̈́͊̈́͛͆́̒̊̇̾̎͆͌͗͐̓̆̌̀̄̔́͋̈́̽́͊̾́͆̓̀̀̇̄̈́͌̉͂̑͗͒̌͊͌͂͌̆̽͗̂̓̃̓̐̐̀̔͂̎̄̂͐̅̆̉̀̑͋̈̿̈́̌̚̚̚̚̚͘͘̕͘̚̚͘̕̚̚͘͘͜͜͜͜͝͠͠͝͝͝͝͠͠͠͝͝͝͠ͅͅg̵̨̡̡̛̣͖̥̫̮̺͚͕̳̗̞̯̞̙̺̰͇̳̝̼͔̫͓̪̠̦̘͉̮̊̀̓̌̌͂̉̀̐͆̂͌̑̎̀̃̇̿̄̏̈́̊̈̐͛͊̏́̀͑́͛̽̋͛̈͆͛͋͌͂̓̍̒̊̂̃͋̄͂̄͊̄̇͒̽͗́̈̐́̇̍̅͊̏̌̈̐́̏͛̆̉̎͆̑̋͒̾͆̒̾̃́̅̾̄̿̈́̃͂̀̓̿͛͗̽̔͒́͗̌̀͗̇͑̍͌́͂̍̑̉̍͊̔̿͘͘̚̚͘̕̚̕̕͜͠͝͝͝͝͝͠͝͝ơ̸̡̢̧̡̧̡̢̧̨̢̡̧̡̢̢̧̛̛̯̻̞̮͔͉̙̮͚͍̹͚͍͎̗̖͈͉̬̱̪͈̲͎̪͎͈̗̠͔̖͉̭̫̻̺̘͈̼͔͓͖͎̲̭̫̝̝̦̭͍͉̝͕̺̻̩͈̫̪̹͇͓̰̬̲̦̹̳̰̘̖̙̰̦̪̗̼͎̟̝̣̮̤͖̻̻͎̠̹͙̭̙͎̘̹̙̼͈̟̲̖̤̖̣̰̘͖̞̲͓̺̯͖͉̰̭̼͙̖͈̭͎͇̟̦̓̔̎̾͒̄̓͊͊̍̾̏͌̎͒̊̐̉̑͒̉̋͆̒͆́̈́̐͋̿̈̉̃͒͆̐̀͋͂̇̾̓̒̍̈̇̇̔́̆̾̓̉̿̿͆̒̀̋͆̑̓́́̒̽̈́̓̈̇̽̅͊͆̾̋̿̀͒̄̿̌̉̓̓̍̐̉̒̽́̐̋̾̈̔̉͑̆̅̉̃̀̏̀̔̾̿͑̆̄͗̔̑̄̓̽͗͊́̒̈́͌̅̅̑̉̀̐̒̾̓͘̚̕͘̚̕͘̚̕͘̚̚͝͠͝͝͝͝͝͝͝͝͝͝͝ͅͅͅ"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:padding="16dp"
@@ -173,10 +173,15 @@
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:text="Next"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:text="Next question"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/answer4"
         app:layout_constraintEnd_toEndOf="parent"
 
         />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

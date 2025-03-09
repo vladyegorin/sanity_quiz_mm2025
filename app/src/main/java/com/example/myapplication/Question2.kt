@@ -3,24 +3,27 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.animation.AnimationUtils
 import android.widget.Button
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
-import com.example.myapplication.InsideQuiz
+import java.lang.Thread.sleep
 
-class InsideQuiz: AppCompatActivity() {
+class Question2: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.insidequiz)
+
+        var questionCounter = intent.getIntExtra("questionCounter", 0)
+
         val panicButton = findViewById<Button>(R.id.panicButton)
-        var questionCounter = 0;
+        panicButton.setOnClickListener{
+            noNeedToPanicDialog()
+        }
 
         val ans1 = findViewById<TextView>(R.id.answerText1)
         val ans2 = findViewById<TextView>(R.id.answerText2)
@@ -34,29 +37,12 @@ class InsideQuiz: AppCompatActivity() {
         val nextButton: Button = findViewById(R.id.nextButton)
         nextButton.visibility = Button.INVISIBLE;
 
-        question.setText("What color is the sky?")
-        ans1.setText("Blue")
-        ans2.setText("Red")
-        ans3.setText("Green")
-        ans4.setText("Yellow")
-
-        //30+
-        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation)
-
-        //60+
-        val pulseAnimationExtra = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation_extra)
-
-        //100
-        val pulseAnimation100 = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation_100)
-
-        panicButton.visibility = Button.VISIBLE;
-        //panicButton.startAnimation(pulseAnimation)
-        panicButton.setOnClickListener {
-            noNeedToPanicDialog()
-        }
-
+        question.setText("What animal says 'meow'?")
+        ans1.setText("Dog")
+        ans2.setText("Snail")
+        ans3.setText("Cat")
+        ans4.setText("Aardvark")
         var selectedAnswer: CardView? = null
-
 
         answer1.setOnClickListener {
             selectedAnswer = handleAnswerClick(selectedAnswer, answer1, nextButton)
@@ -73,26 +59,28 @@ class InsideQuiz: AppCompatActivity() {
         answer4.setOnClickListener {
             selectedAnswer = handleAnswerClick(selectedAnswer, answer4, nextButton)
         }
-
         nextButton.setOnClickListener {
             questionCounter++//add counter to intent
-            if(selectedAnswer != null && selectedAnswer == answer1){
-                val intent = Intent(this, Question2::class.java)
+            if(selectedAnswer != null && selectedAnswer == answer3){
+                val intent = Intent(this, Question3::class.java)
                 intent.putExtra("questionCounter", questionCounter)
                 startActivity(intent)
 
             } else{
                 wrongAnswerDialog()
+//                val intent = Intent(this, ScreamerActivity::class.java)
+//
+//                startActivity(intent)
+
 
             }
         }
     }
 
 
-
     private fun noNeedToPanicDialog() {
 
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.no_need_to_panic_dialogue, null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.no_need_to_panic_q2, null)
 
 
         val dialog = AlertDialog.Builder(this)
@@ -110,10 +98,9 @@ class InsideQuiz: AppCompatActivity() {
 
         dialog.show()
     }
-
     private fun wrongAnswerDialog() {
 
-        val dialogView = LayoutInflater.from(this).inflate(R.layout.wrong_answer_dialogue_q1, null)
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.wrong_answer_dialogue_q2, null)
 
 
         val dialog = AlertDialog.Builder(this)
@@ -131,9 +118,6 @@ class InsideQuiz: AppCompatActivity() {
 
         dialog.show()
     }
-
-
-
     private fun handleAnswerClick(selectedAnswer: CardView?, newAnswer: CardView, nextButton: Button): CardView {
         // Deselect the previously selected answer
         selectedAnswer?.background = ContextCompat.getDrawable(this, R.drawable.default_answer_background)
