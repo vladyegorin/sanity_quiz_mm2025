@@ -28,7 +28,8 @@
             android:shadowDy="4"
             android:shadowRadius="8"
             android:text="You should panic. I’m not surprised. You’ve been running, but they’ve been right behind you. Always."
-            android:textColor="#000000"
+            android:textColor="#E0115F
+"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -36,10 +37,10 @@
             android:id="@+id/okButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Try once more..."
+            android:text="PANIC!PANIC!PANIC!"
             android:textSize="18sp"
-            android:textColor="#000000"
-            android:backgroundTint="#9c0d11"
+            android:textColor="#E0115F"
+            android:backgroundTint="#750B0F"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:paddingHorizontal="24dp"
