@@ -22,7 +22,7 @@ class Question3: AppCompatActivity() {
 
         val panicButton = findViewById<Button>(R.id.panicButton)
         panicButton.setOnClickListener {
-            val intent = Intent(this, BreathingActivity::class.java)
+            val intent = Intent(this, BreathingActivityCracked::class.java)
             startActivity(intent)
         }
         val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation)
