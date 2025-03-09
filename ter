@@ -1,0 +1,164 @@
+[1mdiff --git a/README.md b/README.md[m
+[1mnew file mode 100644[m
+[1mindex 0000000..21129c0[m
+[1m--- /dev/null[m
+[1m+++ b/README.md[m
+[36m@@ -0,0 +1,24 @@[m
+[32m+[m[32m# Sanity Quiz - A Psychological Horror Quiz[m[41m  [m
+[32m+[m
+[32m+[m[32m## About the Project[m[41m  [m
+[32m+[m[32mSanity quiz is an interactive quiz app designed to slowly break the player's sense of reality. The questions start off normal, but as the user progresses, the answers become increasingly bizarre, the UI distorts, and the panic level rises. The quiz features dynamic UI effects, a panic button that reacts to user choices, and psychological horror elements to create an unsettling experience.[m[41m  [m
+[32m+[m
+[32m+[m[32m## Technologies Used[m[41m  [m
+[32m+[m[32m- Kotlin – The app is built using Kotlin for Android development.[m[41m  [m
+[32m+[m[32m- Glide ([bumptech/glide](https://github.com/bumptech/glide)) – Used for efficient image loading and handling dynamic UI effects.[m[41m  [m
+[32m+[m
+[32m+[m[32m## Developers[m[41m  [m
+[32m+[m[32mThis project was created by:[m[41m  [m
+[32m+[m[32m- Vladimir Yegorin[m[41m  [m
+[32m+[m[32m- Dyk Kyong Do[m[41m  [m
+[32m+[m
+[32m+[m[32m## Features[m[41m  [m
+[32m+[m[32m- Panic System: A dynamic panic meter that increases based on the user’s choices.[m[41m  [m
+[32m+[m[32m- UI Distortions: As the quiz progresses, text glitches, colors change, and answers swap unexpectedly.[m[41m  [m
+[32m+[m[32m- Forced Interactions: Some questions manipulate the user's input, making them feel out of control.[m[41m  [m
+[32m+[m[32m- Psychological Horror Elements: Whispering sounds, fake memory manipulation, and eerie messages enhance the fear factor.[m[41m  [m
+[32m+[m
+[32m+[m[32m## Installation[m[41m  [m
+[32m+[m[32m1. Clone the repository:[m[41m  [m
+[32m+[m[32m   ```sh[m
+[32m+[m[32m   git clone https://github.com/vladyegorin/sanity_quiz_mm2025[m
+[1mdiff --git a/app/src/main/java/com/example/myapplication/Question7.kt b/app/src/main/java/com/example/myapplication/Question7.kt[m
+[1mindex 0f93ddf..837f63a 100644[m
+[1m--- a/app/src/main/java/com/example/myapplication/Question7.kt[m
+[1m+++ b/app/src/main/java/com/example/myapplication/Question7.kt[m
+[36m@@ -1,76 +1,11 @@[m
+ package com.example.myapplication[m
+ [m
+[31m-import android.content.Intent[m
+ import android.os.Bundle[m
+[31m-import android.os.Looper[m
+[31m-import android.view.LayoutInflater[m
+[31m-import android.widget.Button[m
+[31m-import android.widget.TextView[m
+[31m-import android.widget.Toolbar[m
+[31m-import androidx.activity.enableEdgeToEdge[m
+[31m-import androidx.appcompat.app.AlertDialog[m
+ import androidx.appcompat.app.AppCompatActivity[m
+[31m-import androidx.cardview.widget.CardView[m
+[31m-import androidx.core.content.ContextCompat[m
+[31m-[m
+[31m-class Question7 : AppCompatActivity() {[m
+ [m
+[32m+[m[32mclass Question7: AppCompatActivity() {[m
+     override fun onCreate(savedInstanceState: Bundle?) {[m
+         super.onCreate(savedInstanceState)[m
+[31m-        enableEdgeToEdge()[m
+[31m-        setContentView(R.layout.insidequiz)[m
+[31m-[m
+[31m-        val panicButton = findViewById<Button>(R.id.panicButton)[m
+[31m-        panicButton.visibility = Button.INVISIBLE[m
+[31m-[m
+[31m-        val ans1 = findViewById<TextView>(R.id.answerText1)[m
+[31m-        val ans2 = findViewById<TextView>(R.id.answerText2)[m
+[31m-        val ans3 = findViewById<TextView>(R.id.answerText3)[m
+[31m-        val ans4 = findViewById<TextView>(R.id.answerText4)[m
+[31m-        val answer1: CardView = findViewById(R.id.answer1)[m
+[31m-        val answer2: CardView = findViewById(R.id.answer2)[m
+[31m-        val answer3: CardView = findViewById(R.id.answer3)[m
+[31m-        val answer4: CardView = findViewById(R.id.answer4)[m
+[31m-        val question = findViewById<TextView>(R.id.chigibam)[m
+[31m-        val nextButton: Button = findViewById(R.id.nextButton)[m
+[31m-        nextButton.visibility = Button.INVISIBLE[m
+[31m-[m
+[31m-[m
+[31m-        // Set question and answers[m
+[31m-        question.text = "How many colors are in a rainbow?"[m
+[31m-        ans1.text = "6" // Empty[m
+[31m-        ans2.text = "4" // Empty[m
+[31m-        ans3.text = "8" // Empty[m
+[31m-        ans4.text = "7" // Initially shows "4"[m
+[31m-[m
+[31m-        // Set click listener for the 4th CardView[m
+[31m-        answer4.setOnClickListener {[m
+[31m-            answer1.visibility = CardView.INVISIBLE[m
+[31m-            answer2.visibility = CardView.INVISIBLE[m
+[31m-            answer3.visibility = CardView.INVISIBLE[m
+[31m-            answer4.visibility = CardView.INVISIBLE[m
+[31m-            goNuts()[m
+[31m-        }[m
+[31m-    }[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-    private fun goNuts() {[m
+[31m-[m
+[31m-        val mainLayout: androidx.constraintlayout.widget.ConstraintLayout = findViewById(R.id.mainLayout)[m
+[31m-        mainLayout.setBackgroundResource(R.drawable.too_late)[m
+[31m-[m
+[31m-[m
+[31m-        var toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar)[m
+[31m-        toolbar.title = "Ḿ̵̬͔̂̏͠y̵̢̡̨̫͔̻͖͕͊̍͋̍̂̍̈͝ ̴̮̹͇̬͉͍͎̪͐̈́̈́̾̏̇́͝l̶͙̳̤̦̟̝̔͗̍̽́̑̄̃͘͜͜ą̸͔̲͐̊̔͛̉̕̕s̶̟̖̪̿͂̀t̸̨̉̂̊̄́̕ ̵͇̊̽̾̎͑̅̾̍q̴̧̡̼̜͆̒͐̒͂͌̌͛͗u̵̘̱͍͚̙͈͎̥͒̍̏͌̍̾̅̀̎͜͠ͅi̵̢̛̺͉͔̬̒̓̓͂̀ź̶̢̳̘͈̬̥̙̬͙͘͜͝!̵̢̛̘͓̳̠͇͊̈́̽̿̑͌̾͜"[m
+[31m-[m
+[31m-        val question = findViewById<TextView>(R.id.chigibam)[m
+[31m-        question.visibility = TextView.INVISIBLE[m
+[31m-[m
+[31m-        android.os.Handler(Looper.getMainLooper()).postDelayed({//crashes the app[m
+[31m-            finishAffinity()[m
+[31m-            System.exit(0)[m
+[31m-        }, 3000)[m
+[32m+[m[32m        setContentView(R.layout.special_q7_layout)[m
+     }[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/app/src/main/res/drawable/too_late.png b/app/src/main/res/drawable/too_late.png[m
+[1mdeleted file mode 100644[m
+[1mindex d4a9e04..0000000[m
+Binary files a/app/src/main/res/drawable/too_late.png and /dev/null differ
+[1mdiff --git a/app/src/main/res/layout/right_thing_to_panic_dialogue.xml b/app/src/main/res/layout/right_thing_to_panic_dialogue.xml[m
+[1mindex 38d3ee5..b78d900 100644[m
+[1m--- a/app/src/main/res/layout/right_thing_to_panic_dialogue.xml[m
+[1m+++ b/app/src/main/res/layout/right_thing_to_panic_dialogue.xml[m
+[36m@@ -28,9 +28,7 @@[m
+             android:shadowDy="4"[m
+             android:shadowRadius="8"[m
+             android:text="You should panic. I’m not surprised. You’ve been running, but they’ve been right behind you. Always."[m
+[31m-            android:textColor="#FF2400[m
+[31m-[m
+[31m-[m
+[32m+[m[32m            android:textColor="#E0115F[m
+ "[m
+             android:textSize="24sp"[m
+             android:textStyle="bold" />[m
+[36m@@ -41,7 +39,7 @@[m
+             android:layout_height="wrap_content"[m
+             android:text="PANIC!PANIC!PANIC!"[m
+             android:textSize="18sp"[m
+[31m-            android:textColor="#FF2400"[m
+[32m+[m[32m            android:textColor="#E0115F"[m
+             android:backgroundTint="#750B0F"[m
+             android:layout_gravity="center"[m
+             android:layout_marginTop="16dp"[m
+[1mdiff --git a/app/src/main/res/layout/wrong_answer_dialogue_q5.xml b/app/src/main/res/layout/wrong_answer_dialogue_q5.xml[m
+[1mindex c6df021..6c5598d 100644[m
+[1m--- a/app/src/main/res/layout/wrong_answer_dialogue_q5.xml[m
+[1m+++ b/app/src/main/res/layout/wrong_answer_dialogue_q5.xml[m
+[36m@@ -6,7 +6,7 @@[m
+     <ImageView[m
+         android:layout_width="match_parent"[m
+         android:layout_height="wrap_content"[m
+[31m-        android:src="@drawable/it_dont_matter_background"[m
+[32m+[m[32m        android:src="@drawable/good_to_panic"[m
+         android:scaleType="centerCrop"[m
+         android:adjustViewBounds="true" />[m
+ [m
+[36m@@ -27,7 +27,7 @@[m
+             android:shadowDx="4"[m
+             android:shadowDy="4"[m
+             android:shadowRadius="8"[m
+[31m-            android:text="Do not pretend like there is more than one correct answer..."[m
+[32m+[m[32m            android:text="You should panic. I’m not surprised. You’ve been running, but they’ve been right behind you. Always."[m
+             android:textColor="#000000"[m
+             android:textSize="24sp"[m
+             android:textStyle="bold" />[m
