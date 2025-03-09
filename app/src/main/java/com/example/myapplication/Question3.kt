@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.animation.AnimationUtils
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -22,7 +23,10 @@ class Question3: AppCompatActivity() {
         val panicButton = findViewById<Button>(R.id.panicButton)
         panicButton.setOnClickListener {
             val intent = Intent(this, BreathingActivity::class.java)
+            startActivity(intent)
         }
+        val pulseAnimation = AnimationUtils.loadAnimation(this, R.anim.pulsation_animation)
+        panicButton.startAnimation(pulseAnimation)
 
         val ans1 = findViewById<TextView>(R.id.answerText1)
         val ans2 = findViewById<TextView>(R.id.answerText2)
