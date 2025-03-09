@@ -28,7 +28,9 @@
             android:shadowDy="4"
             android:shadowRadius="8"
             android:text="You should panic. I’m not surprised. You’ve been running, but they’ve been right behind you. Always."
-            android:textColor="#E0115F
+            android:textColor="#FF2400
+
+
 "
             android:textSize="24sp"
             android:textStyle="bold" />
@@ -39,7 +41,7 @@
             android:layout_height="wrap_content"
             android:text="PANIC!PANIC!PANIC!"
             android:textSize="18sp"
-            android:textColor="#E0115F"
+            android:textColor="#FF2400"
             android:backgroundTint="#750B0F"
             android:layout_gravity="center"
             android:layout_marginTop="16dp"

@@ -6,7 +6,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/good_to_panic"
+        android:src="@drawable/it_dont_matter_background"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true" />
 
@@ -27,7 +27,7 @@
             android:shadowDx="4"
             android:shadowDy="4"
             android:shadowRadius="8"
-            android:text="You should panic. I’m not surprised. You’ve been running, but they’ve been right behind you. Always."
+            android:text="Do not pretend like there is more than one correct answer..."
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
